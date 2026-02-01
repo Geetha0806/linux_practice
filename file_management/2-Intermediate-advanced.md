@@ -51,3 +51,21 @@ tail -f logs/application.log
 > - Continuously displays new lines as they are appended
 > - Extremely common in production debugging
 ---
+## Scenario 7
+**Task:** You want to delete the file application.log from the logs directory. Which command will you run?
+**Command:**
+```bash
+rm logs/application.log
+```
+---
+## Scenario 8
+**Task:** You want to delete the entire logs directory and everything inside it. Which command will you run?
+**Command:**
+```bash
+rm -rf logs/
+```
+> **Why rm -rf**
+> - -r → recursive (deletes directory and its contents)
+>- -f → force (no confirmation prompts)
+> Common in cleanup scripts and automation
+---
