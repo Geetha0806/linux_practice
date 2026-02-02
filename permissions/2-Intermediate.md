@@ -54,71 +54,17 @@ chmod 1777 /shared/tmp
 ```
 ---
 ## Scenario 6
-**Task:** You want to view detailed permissions, owner, and group of all files in the current directory. Which command will you run?
+**Task:** You want new files to be created with 644 permissions by default. Which command will you run?
 **Command:**
 ```bash
-ls -l
+umask 022
 ```
-> **Why ls -l:**
-> - File type (- for file, d for directory)
-> - Permissions (rwx for user/group/others)
-> - Number of links
-> - Owner and group
-> - File size and modification date
+
 ---
 ## Scenario 7
-**Task:** You want to change the owner of the file deploy.sh to a user named devops. Which command will you run?
+**Task:** You want new directories to be created with 750 permissions by default. Which command will you run?
 **Command:**
 ```bash
-chown devops deploy.sh
-```
----
-## Scenario 8
-**Task:** You want to change both the owner to devops and the group to ops for the file deploy.sh. Which command will you run?
-**Command:**
-```bash
-chown devops:ops deploy.sh
-```
----
-## Scenario 9
-**Task:** You want to change the group of a file deploy.sh to ops without changing the owner. Which command will you run?
-**Command:**
-```bash
-chown :ops deploy.sh
-```
----
-## Scenario 10
-**Task:** You want to recursively change the owner and group of the directory scripts and all its contents to devops:ops. Which command will you run?
-**Command:**
-```bash
-chown -R devops:ops scripts
-```
----
-## Scenario 5
-**Task:** You have a file deploy.sh.
-You want to give execute permission to owner and group, but no permissions to others. Which command will you run?
-**Command:**
-```bash
-chmod ug+x,o= deploy.sh
-```
----
-## Scenario 6
-**Task:** You want to view detailed permissions, owner, and group of all files in the current directory. Which command will you run?
-**Command:**
-```bash
-ls -l
-```
-> **Why ls -l:**
-> - File type (- for file, d for directory)
-> - Permissions (rwx for user/group/others)
-> - Number of links
-> - Owner and group
-> - File size and modification date
----
-## Scenario 7
-**Task:** You want to change the owner of the file deploy.sh to a user named devops. Which command will you run?
-**Command:**
-```bash
-chown devops deploy.sh
+umask 027
 ```
 ---
